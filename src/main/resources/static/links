@@ -1,3 +1,76 @@
 http://localhost:8080/v3/api-docs/
 springdoc.api-docs.path=/api-docs => http://localhost:8080/api-docs/
 http://localhost:8080/swagger-ui.html
+
+--- POST ---------------------------------------------------------------------------------------------------------------
+
+http://localhost:8080/notes
+
+---
+
+{
+  "id": "string",
+  "commentList": [
+    {
+      "comment": "string"
+    }
+  ]
+}
+
+---
+
+curl -X 'POST' \
+  'http://localhost:8080/notes' \
+  -H 'accept: application/hal+json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": "string",
+  "commentList": [
+    {
+      "comment": "string"
+    }
+  ]
+}'
+
+---
+
+{
+    "_embedded": {
+        "notes": [
+            {
+                "commentList": [
+                    {
+                        "comment": "string",
+                        "creationDate": null,
+                        "updateDate": null
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/notes/61a68b00184fe44331a290bc"
+                    },
+                    "note": {
+                        "href": "http://localhost:8080/notes/61a68b00184fe44331a290bc"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/notes"
+        },
+        "profile": {
+            "href": "http://localhost:8080/profile/notes"
+        },
+        "search": {
+            "href": "http://localhost:8080/notes/search"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
+}

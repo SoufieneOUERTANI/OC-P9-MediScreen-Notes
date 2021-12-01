@@ -15,12 +15,13 @@ import java.util.List;
 @Document(collection = "notes")
 public class Note {
     @Id
-    private String id;
+    private String patientId;
+
     private List<Comment> commentList;
 
     @PersistenceConstructor
-    public Note(String id, List<Comment> commentList) {
-        this.id = id;
+    public Note(String patientId, List<Comment> commentList) {
+        this.patientId = patientId;
         this.commentList = commentList;
     }
 }
