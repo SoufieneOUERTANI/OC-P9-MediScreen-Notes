@@ -93,6 +93,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>docker-mediscreen-note-1.0.1</finalName>
     </build>
 
 </project>

@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/java/com/ouertani/notes/model/Commentbis.java
+/src/main/java/com/ouertani/notes/repository/CommentbisRepository.java
+/src/main/java/com/ouertani/notes/model/Notebis.java
+/src/main/java/com/ouertani/notes/repository/NotebisRepository.java
+/src/main/resources/static/Save
+/src/main/resources/static/Draft
